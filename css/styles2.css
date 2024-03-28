@@ -385,11 +385,22 @@ header {
 
 .ingresar {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    flex-direction: column-reverse;
+    align-items: center;
     font-family: var(--fuenteHeading2);
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 }
+
+@media (min-width: 600px) {
+    .ingresar{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-top: 3rem;
+    }
+    
+}
+
 
 .ingresar h1 {
     font-size: 3rem;
@@ -405,40 +416,64 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    margin-bottom: 5rem;
     font-family: var(--fuenteHeading2);
-    margin-top: 5rem;
+
+}
+
+.formulario-login input { /*input*/
+    padding: 5px 4rem;
+    border-radius: 1rem;
 }
 
 .grupo-formulario { /* Usuario y Contraseña*/
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
+    align-items: center;
 }
 
 .formulario-login label { /* Label */
     padding: 1rem;
 }
 
-.formulario-login input { /*input*/
-    padding: 5px 12rem;
-    border-radius: 1rem;
-}
-
 .boton-ingresar { /* Boton */
     margin-bottom: 2rem;
-    padding: 5px 18rem;
+    padding: 5px 10rem;
     border-radius: 1rem;
     background-color: var(--rojo1);
     color: var(--blanco);
 }
+
+@media (min-width: 600px) {
+    .formulario-login {
+        margin: 5rem 0;
+    }
+    .formulario-login input {
+        padding: 5px 12rem;
+    }
+    .boton-ingresar {
+        padding: 5px 18rem;
+    }
+}
+
+@media (min-width: 480px) {
+    .formulario-login input {
+        padding: 5px 8rem;
+    }
+    .boton-ingresar {
+        padding: 5px 14rem;
+    }
+}
+
+
+
 
 .links-asociate { /* Links */
     display: flex;
     flex-direction: column;
     align-items: center;
     color: red;
+    text-align: center;
 } 
 
 .formulario-login a {

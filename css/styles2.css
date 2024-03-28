@@ -1,0 +1,502 @@
+/*CUSTOM PROPERTIES*/
+:root {
+    --fuenteHeading: "Protest Strike", sans-serif;
+    --fuenteHeading2: "Open Sans", sans-serif;
+    --fuenteSection: "Cormorant Garamond", serif;
+    --rojo1: #d80f1b;
+    --rojo2: #ee2d2f;
+    --blanco: #fff;
+    --negro: #000;
+    --gris: #e1e1e1;
+}
+
+html{
+    font-size: 62.5%; /* 1 REM = 10PX */
+    box-sizing: border-box; /* paul irish borderbox */
+}
+
+*, *:before, *:after { /* paul irish borderbox */
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px; /* 1 REM = 10PX */
+    background-color: var(--rojo1);
+}
+
+
+/*  GLOBALES  */
+
+.contenedor {
+    padding: 1.5rem 3rem;
+    @media (min-width: 768px) {
+        padding: 1.5rem 12rem;
+    }
+}
+
+.contenedor2 {
+    padding: 1.5rem 20rem;
+}
+
+a { /* Para sacar el subrayado de los enlaces*/
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/** Utilidades **/
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.fondo-blanco {
+    background-color: var(--blanco);
+}
+.fondo-rojo {
+    background-color: var(--rojo1);
+}
+
+/*  HEADER  */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between; /* para tener a la navegacion y al logo de cada lado */
+         /* para alinear horizontalmente todo el header */
+    }
+    
+    border-bottom: 1.5px solid rgba(27, 27, 27, 0.096);
+}
+
+.logo__conteiner {
+    display: flex;
+    align-items: center;
+}
+.logo__header { /* logo independiente header  */
+    background-image: url(../img/independiente-logo-escudo.webp);
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 5.5rem;
+    height: 5.5rem;
+    align-items: center;
+}
+
+.independiente__header {
+    font-family: var(--fuenteHeading);
+    font-size: 3.5rem;
+    color: var(--blanco);
+    letter-spacing: 2px;
+    margin-left: 1rem;    
+}
+
+.navegacion__header {
+    display: flex;
+}
+
+
+.navegacion__enlace { /* enlaces (1x1) de la navegacion header*/
+    display: flex;
+    font-family: var(--fuenteHeading2);
+    font-size: 1.8rem;
+    font-weight: 200;
+    color: var(--blanco);
+    margin: auto 3px;
+
+}
+
+
+
+
+/* REDES */
+
+.navegacion__redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    margin-bottom: 1rem;
+}
+
+.logo__redes {
+    height: 2rem;
+    width: 2rem;
+    margin: 0 5px;
+}
+
+
+/* SECCION 1 / PRINCIPAL */
+
+.seccion-principal {
+    width: auto;
+    height: 50rem;
+    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+
+    @media (min-width: 768px ) {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+.articulos-principal {
+    display: flex;
+    justify-content: baseline;
+    position: relative;
+}
+
+.articulos-principal a {
+    position: absolute; 
+    font-family: var(--fuenteHeading2);
+    bottom: 2rem;
+    left: 2rem;
+    background-color: var(--blanco);
+    color: var(--rojo1);
+    padding: .5rem;
+    border-radius: 2rem;
+    text-decoration: underline;
+    background-position: center;
+}
+
+.articulo__estadio{
+    background-image: url(../img/estadio4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    @media (min-width: 768px) {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+    
+}
+
+.articulo__asociate{
+    background-image: url(../img/asociate.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.articulo__peñas {
+    background-image: url(../img/peñas.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* SECCION 2 / JUGADORES */
+
+.seccion-jugadores {
+    background-image: url(../img/Independiente_saludo_libertadores_1965.jpg);
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 2rem;
+    font-family: var(--fuenteSection);
+    @media (min-width: 768px) {
+        background-repeat: no-repeat;
+    }
+}
+
+.entrada1{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color: var(--blanco);
+}
+
+.entrada1 a {
+    font-family: var(--fuenteHeading2);
+    text-decoration: underline;
+}
+
+.imagenes-jugadores {
+    display: grid;
+    grid-template-rows: repeat(6, 40rem);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+
+    @media (min-width: 480px) {
+        grid-template-rows: repeat(3, 40rem);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 768px) {
+        grid-template-rows: repeat(2, 30rem);
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1024px) {
+        grid-template-rows: 20rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+
+
+.jugador1{
+    background-image: url(../img/jugadores/33_rodrigo_rey.jpg);
+    background-size:cover;
+}
+.jugador2{
+    background-image: url(../img/jugadores/02_joaquín_laso.jpg);
+    background-size:cover;
+}
+.jugador3{
+    background-image: url(../img/jugadores/09_gabriel_Ávalos.jpg);
+    background-size:cover;
+}
+.jugador4{
+    background-image: url(../img/jugadores/11_federico_mancuello.jpg);
+    background-size:cover;
+}
+.jugador5{
+    background-image: url(../img/jugadores/17_lucas_gonzález.jpg);
+    background-size:cover;
+}
+.jugador6{
+    background-image: url(../img/jugadores/19_alex_luna.jpg);
+    background-size:cover;
+}
+
+
+/* PAGINA ESTADIO ----------------------------------------------------- */ 
+
+/* IMAGEN ESTADIO  */
+
+.imagen-estadio {
+    height: 100%; 
+    width: 100%;
+}
+
+/* SECCION LDA */
+.seccion-lda {
+    padding-bottom: 5rem;
+    font-family: var(--fuenteHeading2);
+}
+
+.entrada-estadio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.entrada-estadio h2 {
+    text-align: center;
+}
+
+@media (min-width: 480px) {
+    .entrada-estadio {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .entrada-estadio h2 {
+        text-align: left;
+    }
+}
+
+.entrada-estadio a {
+    text-decoration: underline;
+}
+
+.entrada-info-estadio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .entrada-info-estadio {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }   
+}
+
+.info-estadio img{
+    width: 4rem;
+    height: auto;
+}
+
+@media (min-width: 480px) {
+    .info-estadio img{
+        width: 5rem;
+        height: auto;
+    }
+    .info-estadio p {
+        font-size: 18px;
+    }
+}
+
+.info-estadio {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* MAPA ESTADIO */
+
+.capacidades {
+    padding-top: 5rem ;
+    background-color: var(--rojo2);
+}
+
+#imagen-capacidades {
+    width: 100%;
+}
+
+
+
+/* PAGINA ASOCIATE ------------------------------------------------------ */
+
+/* ENTRADA */
+
+.ingresar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--fuenteHeading2);
+    margin-top: 3rem;
+}
+
+.ingresar h1 {
+    font-size: 3rem;
+}
+
+.ingresar a {
+    text-decoration: underline;
+}
+/* FORMULARIO */
+
+.formulario-login { /* formulario*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    font-family: var(--fuenteHeading2);
+    margin-top: 5rem;
+}
+
+.grupo-formulario { /* Usuario y Contraseña*/
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.formulario-login label { /* Label */
+    padding: 1rem;
+}
+
+.formulario-login input { /*input*/
+    padding: 5px 12rem;
+    border-radius: 1rem;
+}
+
+.boton-ingresar { /* Boton */
+    margin-bottom: 2rem;
+    padding: 5px 18rem;
+    border-radius: 1rem;
+    background-color: var(--rojo1);
+    color: var(--blanco);
+}
+
+.links-asociate { /* Links */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: red;
+} 
+
+.formulario-login a {
+    margin-bottom: 2rem;
+}
+
+
+/* PEÑAS -----------------------------------------------------------------*/
+
+.entrada-penas {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--fuenteHeading2);
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(27, 27, 27, 0.096);
+}
+
+.entrada-penas h1 {
+    font-size: 3rem;
+}
+
+.entrada-penas a {
+    text-decoration: underline;
+}
+
+.mapa-penas iframe {
+    width: 100%;
+    height: 50rem;
+    margin: 5rem 0;
+}
+
+
+/* PLANTEL --------------------------------------------------------------------*/
+.entrada-plantel {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--fuenteHeading2);
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(27, 27, 27, 0.096);
+}
+
+.titulo-plantel {
+    border-bottom: 1.5px solid rgba(27, 27, 27, 0.096);
+}
+
+.plantel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+
+
+
+/* FOOTER ---------------------------------------------------------------------*/
+
+footer {
+    border-top: 1px solid rgba(27, 27, 27, 0.096);
+}

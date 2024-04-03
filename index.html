@@ -22,6 +22,9 @@
     <!-- ICONO -->
     <link rel="shortcut icon" href="img/independiente-logo-escudo.webp" />
 
+    <!-- Font Awesome para los íconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <!-- FUENTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,79 +34,171 @@
 </head>
 
 <body>
-    <header class="contenedor">
-        <div class="logo__conteiner">
-            <a class="logo__header" href="index.html"></a>
-            <a class="independiente__header" href="index.html">INDEPENDIENTE</a>
+    <!-- INICIO DEL HEADER -->
+    <div class="container-full">
+      <!-- inicio del navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+            <a class="navbar-brand" href="index.html">
+              <img src="img/independiente-logo-escudo.webp" alt="Logo de la empresa" width="30" height="30" class="d-inline-block align-top">Independiente
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/asociate.html">Asociate</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/estadio.html">Estadio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/peñas.html">Peñas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/plantel.html">Plantel</a>
+                </li>
+              </ul>
+            </div>
+        </nav> 
+        <!-- fin del navbar -->
+        
+
+        <div class="navbar-divider"></div> <!-- linea de separacion -->
+        
+        <!-- inicio seccion redes -->
+        <div class="container">
+          <div class="social-icons">
+            <a href="https://x.com/Independiente?s=20"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/caindependiente/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/Independiente/about"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com/channel/UCvjX3jBp_iLCZCpKqlXhHDw"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
 
-        <nav class="navegacion__header">
-            <a href="pages/asociate.html" class="navegacion__enlace">asociate</a>
-            <p>/</p>
-            <a href="pages/estadio.html" class="navegacion__enlace">estadio</a>
-            <p>/</p>
-            <a href="pages/peñas.html" class="navegacion__enlace">peñas</a>
-            <p>/</p>
-            <a href="pages/plantel.html" class="navegacion__enlace">plantel</a>
-        </nav>
-    </header>
-
-    <div class="contenedor">
-        <div>
-            <nav class="navegacion__redes">
-                <a href="https://x.com/Independiente?s=20" class="logo__redes"><img
-                        src="img/icons8-twitter-50.png" /></a>
-                <p>/</p>
-                <a href="https://www.instagram.com/caindependiente/" class="logo__redes"><img
-                        src="img/icons8-instagram-50.png" /></a>
-                <p>/</p>
-                <a href="https://www.youtube.com/channel/UCvjX3jBp_iLCZCpKqlXhHDw" class="logo__redes"><img
-                        src="img/icons8-youtube-50.png" /></a>
-                <p>/</p>
-                <a href="https://www.facebook.com/Independiente/about" class="logo__redes"><img
-                        src="img/icons8-facebook-50.png" /></a>
-            </nav>
-        </div>
-
-        <main class="seccion-principal">
-            <article class="articulo__estadio articulos-principal">
-                <a href="pages/estadio.html">Estadio Libertadores de América Ricardo Enrique Bochini</a>
-            </article>
-            <article class="articulo__asociate articulos-principal">
-                <a href="pages/asociate.html">Asociate al Rey de Copas</a>
-            </article>
-            <article class="articulo__peñas articulos-principal">
-                <a href="pages/peñas.html">Mirá el mapa de peñas</a>
-            </article>
-        </main>
     </div>
 
-    <section class="seccion-jugadores">
-        <div class="contenedor">
-            <div class="entrada1">
-                <h2>Plantel Profesional</h2>
-                <a href="pages/plantel.html">ver mas</a>
-            </div>
-            <div class="imagenes-jugadores">
-                <div class="jugador1"></div>
-                <div class="jugador2"></div>
-                <div class="jugador3"></div>
-                <div class="jugador4"></div>
-                <div class="jugador5"></div>
-                <div class="jugador6"></div>
-            </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <!-- Primera imagen -->
+          <div class="clickable-image">
+            <a href="pages/estadio.html">
+              <img src="img/estadio4.jpg" alt="Estadio">
+              <div class="image-text">Estadio Libertadores de América Ricardo Enrique Bochini</div>
+            </a>
+          </div>
         </div>
-    </section>
+        <div class="col-md-12 mb-3">
+          <!-- Segunda imagen -->
+          <div class="clickable-image">
+            <a href="pages/asociate.html">
+              <img src="img/asociate.jpg" alt="asociate">
+              <div class="image-text">Asociate al rey de copas</div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <!-- Tercera imagen -->
+          <div class="clickable-image">
+            <a href="pages/peñas.html">
+              <img src="img/peñas.jpg" alt="peñas">
+              <div class="image-text">Mirá el mapa de peñas</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
 
-    <footer class="contenedor">
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, sapiente!
-        </p>
+    <div id="background-carousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#background-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#background-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <!-- Contenido del carrusel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col">
+              <img src="img/jugadores/02_joaquín_laso.jpg" class="d-block w-100" alt="Primera imagen">
+            </div>
+            <div class="col">
+              <img src="img/jugadores/03_adrián_sporle.jpg" class="d-block w-100" alt="Segunda imagen">
+            </div>
+            <div class="col">
+              <img src="img/jugadores/04_mauricio_isla (1).jpg" class="d-block w-100" alt="Tercera imagen">
+            </div>
+            <div class="col">
+              <img src="img/jugadores/08_gabriel_neves.jpg" class="d-block w-100" alt="Cuarta imagen">
+            </div>
+            <div class="col">
+              <img src="img/jugadores/09_gabriel_Ávalos.jpg" class="d-block w-100" alt="Quinta imagen">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col">
+              <img src="img/jugadores/10_santiago_toloza.jpg" class="d-block w-100" alt="Sexta imagen">
+            </div>
+            <div class="col">
+              <img src="img/jugadores/11_federico_mancuello.jpg" class="d-block w-100" alt="Séptima imagen">
+            </div>
+            <div class="col">
+              <img src="img/jugadores/12_mateo_morro.jpg" class="d-block w-100" alt="Octava imagen">
+            </div>
+            <div class="col">
+              <img src="img/jugadores/15_damian_perez.jpg" class="d-block w-100" alt="Novena imagen">
+            </div>
+            <div class="col">
+              <img src="img/jugadores/17_lucas_gonzález.jpg" class="d-block w-100" alt="Décima imagen">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#background-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#background-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+    
+    <div class="container text-center mt-3" id="ver-mas-carousel">
+      <a href="pages/plantel.html">Ver más</a>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>SEDE SOCIAL · AVELLANEDA:</h5>
+            <p>Av. Mitre 470 (1870).</p>
+            <p>4229-7600</p>
+            <p>socios@clubaindependiente.com.ar</p>
+          </div>
+          <div class="col-md-6">
+            <h5>SEDE BOYACA · CAPITAL:</h5>
+            <p>Boyacá 470.</p>
+            <p>4633-7527</p>
+            <p>boyaca@clubaindependiente.com.ar</p>
+          </div>
+        </div>
+      </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+
+    <!-- Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome para los íconos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </body>
 
 </html>
